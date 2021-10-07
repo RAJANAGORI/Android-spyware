@@ -22,7 +22,7 @@ if ! [ -x "$(command -v msfconsole)" ]; then
   echo '[ERROR] Metasploit is not Install so wait for 3 second to process futher.' >&2
   sleep 3
   echo '[INSTALLING] Metasploit in your machine'
-  echo $USER_PASSWORD | sudo -S apt-get update -y && sudo -S apt-get upgarde -y
+  echo $USER_PASSWORD | sudo -S apt-get update -y && sudo -S apt-get upgarde -y && sudo -S apt-get build-essential -y
   echo '[UPDATE AND UPGRADE PROCESS IS DONE'
   curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   chmod 755 msfinstall && \
